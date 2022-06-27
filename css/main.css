@@ -1,0 +1,58 @@
+
+#main_menu ul {   
+    background-color: #15ff00;
+    list-style-type: none;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+
+}
+
+#main_menu ul li {
+    float: left;
+}
+
+#main_menu ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 18px;
+}
+
+.cars_sidebar ul {
+    /* background-color: inherit; */
+    list-style-type: none;
+    width: 100%;
+    padding-left: 0;
+}
+
+.cars_sidebar ul li {
+    background-color: white;
+    margin-top: 10px;
+    padding: 10px 0 10px 5px;
+}
+
+.cars_sidebar ul li a {
+    /* background-color: #eee; */
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    /* border: #eee; */
+    margin-top: 10px;
+
+}
+
+.content {
+    margin-top: 72px;
+    background-color: white;
+    margin: 0;
+}
+
+body {
+    background-color: #eee;
+}
+
+

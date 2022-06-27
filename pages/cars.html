@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="../css/simple-grid.min.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <script src="../js/cars.js" defer></script>
+    <script src="https://unpkg.com/alpinejs" defer></script>
+</head>
+<body>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <div id="main_menu">
+                    <ul>
+                        <li>
+                            <a href="../index.html">Home</a>
+                        </li>
+                        <li>
+                            <a href="#">Cars</a>
+                        </li>
+                        <li>
+                            <a href="shapes.html">Shapes</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section>
+        <div class="container" x-data="carList">
+            <div class="row">
+                <div class="col-12">
+                    <h2>Welcome to CapeTown cars</h2>
+                    <hr>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-3 cars_sidebar">
+                    <h3 >Category</h3>
+                    <ul>
+                        <li><a @click="allCars">All cars</a></li>
+                        <li><a @click="mostPopularCar" >Most Popular Car</a></li>
+                        <li><a @click="nissansFromCK">Nissans From CK</a></li>
+                        <li><a @click="mostBlueCars"> Most Blue Cars</a></li>
+                        <li><a @click="fewestOrangeCars">Fewest Orange Cars</a></li>
+                        <li><a @click="mostPopularModel"> Most Popular Model</a></li>
+                        <li><a @click="mostPopularCL">Most Popular CL</a></li>
+                        <li><a @click="leastPopularCF">least Popular CF</a></li>
+                        
+                        <li><a> Cars From Where
+                            <input x-model="color" placeholder="Color of a car">
+                            <select x-model="townName">
+                                <option value="">select a town</option>
+                                <option value="CJ">Paarl</option>
+                                <option value="CY">Bellville</option>
+                                <option value="PK">Stellenbosch</option>
+                                <option value="CL">Malmesbury</option>
+                                <option value="CA">Cape Town</option>
+                                <option value="CF">Kuilsriver</option>
+                            </select>
+                            <button @click="search"> Search</button>
+                        </a></li>
+                        
+                    </ul>
+                </div>
+                <div class="col-9">
+                    <template x-for="car in cars">
+                        <h4 x-text="car.make"></h4>
+                    </template>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
