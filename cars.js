@@ -364,30 +364,5 @@ document.addEventListener("alpine:init", () => {
 
     }
 
-    // carsForTown() {
-    //   let townCars = [];
-    //   let carReg = "";
-    //   if (townName === "Paarl") {
-    //     carReg = "CJ";
-    //   } else if (townName === "Bellville") {
-    //     carReg = "CY";
-    //   } else if (townName === "Stellenbosch") {
-    //     carReg = "CL";
-    //   } else if (townName === "Malmesbury") {
-    //     carReg = "CK";
-    //   } else if (townName === "Cape Town") {
-    //     carReg = "CA";
-    //   } else if (townName === "Kuilsriver") {
-    //     carReg = "CF";
-    //   }
-    //   for (let i = 0; i < carsObject.length; i++) {
-    //     if (cars[i].reg_number.startsWith(carReg)) {
-    //       townCars.push(carsObject[i]);
-    //     }
-    //   }
-    //   console.log(townCars)
-    //   return townCars;
-    // }
-
   }))
 })
