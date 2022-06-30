@@ -25,7 +25,8 @@ body {
 
 .widget {
   background-color: aquamarine;
-  padding: .5em;
+  padding: 1em;
+  display:block;
 }
 
 button {
@@ -36,6 +37,7 @@ button {
 
 input {
   margin-right: .25em;
+  align-items: center;
 }
 
 input>label {

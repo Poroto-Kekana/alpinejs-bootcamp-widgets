@@ -1,27 +1,21 @@
 document.addEventListener("alpine:init", () => {
     Alpine.data("whichShift", () => ({
-
+        
         message: "",
         shift: "",
         morningShift() {
-        
-           
-                this.shift = "morning"
-                this.message = transportFee(this.shift);
+            this.shift = "morning";
+            this.message = transportFee(this.shift);
             
         },
         afternoonShift() {
-            
-            if (this.shift === "afternoon") {
-                this.message = transportFee(this.shift);
-            }
+            this.shift = "afternoon";
+            this.message = transportFee(this.shift);
+        
         },
         nightShift() {
-            alert("")
-            if (this.shift === "nightshift") {
-                this.message = transportFee(this.shift);
-            }
+            this.shift = "nightshift";
+            this.message = transportFee(this.shift);
         }
-
     }))
 })

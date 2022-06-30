@@ -1,11 +1,12 @@
 document.addEventListener("alpine:init", () => {
-  Alpine.data("enoughAirtimeWidget", () => ({
+  Alpine.data("enoughAirtimeWidget", () => {
+    return {
       airtimeUsage: '',
       availableAmount: '0.00',
       airtimeMessage: '',
       calculate() {
-        alert('')
         this.airtimeMessage = enoughAirtime(this.airtimeUsage, this.availableAmount);
       }
-  }));
+    }
+  });
 });
