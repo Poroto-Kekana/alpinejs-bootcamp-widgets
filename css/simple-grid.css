@@ -21,6 +21,7 @@ body {
 
 .message {
   background-color: bisque;
+  padding-left: 1em;
 }
 
 .widget {
@@ -31,13 +32,19 @@ body {
 
 button {
   border-radius: 0.2em;
-  padding: .25em;
-  margin: 0.25em;
+  margin-left: 1em;
+  width: 25%;
+  height: 25%;
 }
+
+label {
+  margin-left: 1em;
+}
+
 
 input {
   margin-right: .25em;
-  align-items: center;
+  
 }
 
 input>label {
@@ -50,6 +57,11 @@ input>label {
 input>input[type='text'] {
   padding: 0.5em;
   margin: 0.5em;
+}
+
+template {
+  width: 50%;
+  height: 40;
 }
 
 .head {

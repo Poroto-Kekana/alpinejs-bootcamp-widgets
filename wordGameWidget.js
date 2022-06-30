@@ -8,6 +8,13 @@ document.addEventListener("alpine:init", () => {
             this.longWord = longestWord(this.sentence)
             this.shortWord = shortestWord(this.sentence)
             this.wordLength = wordLengths(this.sentence)
+
+            setTimeout(() => {
+                this.sentence = '';
+                this.longWord = '';
+                this.shortWord = '';
+                this.wordLength = '';
+            }, 4000);
         }
     }))
 })

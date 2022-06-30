@@ -19,7 +19,7 @@
 </head>
 <body>
 
-    <div class="container">
+    <div class="container-fluid">
         <h1>Alpine-js Widgets</h1>
         <section class="row">
             <div class="col-6"class="widget" x-data="wordWidget">
@@ -28,7 +28,7 @@
                     <hr>
                 </div>
     
-                <div class="typesentence" class="row" class="col-6" x-text="sentence">
+                <div class="message" class="row" class="col-6" x-text="sentence">
                     Your sentence display here...
                 </div>
     
@@ -37,18 +37,20 @@
                     <input type="text" placeholder="type here..." x-model="sentence">
                     <button @click="calculate">calculate</button>
                 </div>
+                <div x-show="sentence.length > 0">
+                    <div class="message" class="row" class="col-6">
+                        <span>Longest word is: <span x-text="longWord"></span> </span> 
+                    </div>
     
-                <div class="message" class="row" class="col-6">
-                    <span>Longest word is: <span x-text="longWord"></span> </span> 
+                    <div class="message" class="row" class="col-6">
+                        <span>The shortest word is: <span x-text="shortWord" ></span></span> 
+                    </div>
+        
+                    <div class="message" class="row" class="col-6">
+                        <span>Word lengths: <span x-text="wordLength"></span></span>  
+                    </div>
                 </div>
-
-                <div class="message" class="row" class="col-6">
-                    <span>The shortest word is: <span x-text="shortWord" ></span></span> 
-                </div>
-    
-                <div class="message" class="row" class="col-6">
-                    <span>Word lengths: <span x-text="wordLength"></span></span>  
-                </div>
+                
             </div>
     
         
@@ -58,21 +60,15 @@
                     <hr>
                 </div>
     
-                <div class="message" class="row" class="col-6">
+                <div x:show="false" class="message" class="row" class="col-6">
                    <span>Amount due: <span x-text="message"></span></span> 
                 </div>
     
                 <div class="shift" class="row" class="col-6">
                     <button x-on:click="morningShift">Morning Shift</button>
-                </div>
-    
-                <div class="shift" class="row" class="col-6">
                     <button x-on:click="afternoonShift">Afternoon Shift</button>
-                </div>
-    
-                <div class="shift" class="row" class="col-6">
                     <button x-on:click="nightShift">Night-Shift</button>
-                </div> 
+                </div>
             </div>
         </section>
 
@@ -108,22 +104,32 @@
                     <h2>Enough Airtime Widget</h2>
                     <hr>
                 </div>
-                
-                <div>
-                    <label for="usage">Please enter projected usage:</label>
-                    <input type="text" x-model="airtimeUsage" id="usage">
-                </div>
-                
-                <div>
-                    <label for="airtime">Airtime available:</label>
-                    <input type="text" x-model="availableAmount" id="airtime">
-                </div>
 
-                <button x-on:click="calculate">Calculate Airtime Usage</button>
-
-                <div class="row" class="message">
-                    <span>Remaining amount: <span x-text="airtimeMessage" ></span></span>
+                <div class="row"  class="message">
+                    <div class="col-6">
+                        <span>Remaining amount: <span x-text="airtimeMessage" ></span></span>
+                    </div>
                 </div>
+                
+                <div class="row">
+                    <div class="col-6">
+                        <label for="usage">Projected usage:</label>
+                        <input type="text" x-model="airtimeUsage" id="usage">
+                    </div>
+                    <div class="col-6">
+                        <label for="airtime">Airtime available:</label>
+                        <input type="text" x-model="availableAmount" id="airtime">
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-12">
+                        <button  x-on:click="calculate">Calculate Airtime Usage</button>
+                    </div>  
+                </div>
+                
+
+                
             </div>
         </section>
 
@@ -137,7 +143,7 @@
                 </div>
     
                 <div class="row">
-                    <div class="col-6 side-bar">
+                    <div class="col-8 side-bar">
                         <h5>Categories</h5>
                         <div>
                             <button @click="allCars">All cars</button>
@@ -187,7 +193,7 @@
                            
                     </div>
 
-                    <div class="col-6" class="cars">
+                    <div class="col-4" class="cars">
                         <template x-for="car in cars">
                             <h4 x-text="car.make"></h4>
                         </template>
