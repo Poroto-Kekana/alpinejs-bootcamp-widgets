@@ -32,7 +32,7 @@ body {
 
 button {
   border-radius: 0.2em;
-  margin-left: 1em;
+  margin: 1em .5em 1em .5em;
   width: 25%;
   height: 25%;
 }
@@ -43,7 +43,7 @@ label {
 
 
 input {
-  margin-right: .25em;
+  margin: 1em .25em 1em .25em;
   
 }
 
@@ -51,6 +51,7 @@ input>label {
   display: inline-block;
   width: 15em;
   padding: 0.5em;
+  margin: 0.9em;
 
 }
 
@@ -62,6 +63,14 @@ input>input[type='text'] {
 template {
   width: 50%;
   height: 40;
+}
+
+span {
+  background-color: bisque;
+}
+
+span>span {
+  margin: .5em;
 }
 
 .head {

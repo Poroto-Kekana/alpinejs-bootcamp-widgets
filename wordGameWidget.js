@@ -5,9 +5,12 @@ document.addEventListener("alpine:init", () => {
         shortWord: "",
         wordLength: "",
         calculate() {
+
+            
             this.longWord = longestWord(this.sentence)
             this.shortWord = shortestWord(this.sentence)
             this.wordLength = wordLengths(this.sentence)
+
 
             setTimeout(() => {
                 this.sentence = '';

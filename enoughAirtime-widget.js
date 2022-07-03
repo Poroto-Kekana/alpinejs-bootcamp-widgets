@@ -6,7 +6,13 @@ document.addEventListener("alpine:init", () => {
       airtimeMessage: '',
       calculate() {
         this.airtimeMessage = enoughAirtime(this.airtimeUsage, this.availableAmount);
+
+
+        setTimeout(() => {
+          this.airtimeMessage = '';
+        }, 4000);
       }
     }
-  });
+
+  })
 });

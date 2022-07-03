@@ -8,12 +8,12 @@ function enoughAirtime(usage, cost) {
     for (var i = 0; i < used.length; i++) {
       if (used[i].startsWith('call')) {
          totalCost += call
-        console.log("buying call")
       } else if (used[i].startsWith('sms')) {
-        console.log("buying sms")
          totalCost += sms
       } else if (used[i].startsWith('data')) {
                  totalCost += data
+      } else if (!usage) {
+        return "Please enter Projected usage and Airtime Available!";
       }
     }
    

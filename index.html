@@ -19,7 +19,7 @@
 </head>
 <body>
 
-    <div class="container-fluid">
+    <div class="container">
         <h1>Alpine-js Widgets</h1>
         <section class="row">
             <div class="col-6"class="widget" x-data="wordWidget">
@@ -31,11 +31,12 @@
                 <div class="message" class="row" class="col-6" x-text="sentence">
                     Your sentence display here...
                 </div>
+
     
                 <div class="row" class="col-6">
                     <label for="senternce">Insert sentence:</label>
-                    <input type="text" placeholder="type here..." x-model="sentence">
-                    <button @click="calculate">calculate</button>
+                    <input type="text" placeholder="Please insert sentence!" x-model="sentence">
+                    <button x-show="sentence.length > 0" @click="calculate">calculate</button>
                 </div>
                 <div x-show="sentence.length > 0">
                     <div class="message" class="row" class="col-6">
@@ -50,6 +51,8 @@
                         <span>Word lengths: <span x-text="wordLength"></span></span>  
                     </div>
                 </div>
+
+                
                 
             </div>
     
@@ -61,7 +64,7 @@
                 </div>
     
                 <div x:show="false" class="message" class="row" class="col-6">
-                   <span>Amount due: <span x-text="message"></span></span> 
+                   <span>Amount due:<span x-text="message"></span></span> 
                 </div>
     
                 <div class="shift" class="row" class="col-6">
@@ -105,8 +108,8 @@
                     <hr>
                 </div>
 
-                <div class="row"  class="message">
-                    <div class="col-6">
+                <div class="row">
+                    <div class="col-6" class="message">
                         <span>Remaining amount: <span x-text="airtimeMessage" ></span></span>
                     </div>
                 </div>
