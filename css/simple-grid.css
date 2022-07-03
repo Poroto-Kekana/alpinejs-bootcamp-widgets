@@ -60,10 +60,7 @@ input>input[type='text'] {
   margin: 0.5em;
 }
 
-template {
-  width: 50%;
-  height: 40;
-}
+
 
 span {
   background-color: bisque;
@@ -76,6 +73,20 @@ span>span {
 .head {
   text-align: center;
 }
+
+.cars {
+  background-color: bisque;
+  padding-top: 4.5em;
+  margin-left: 1em;
+  /* padding-left: 1em; */
+  /* margin-top: 4em; */
+  /* width: 100%; */
+}
+
+.select {
+  border-radius: 1em;
+}
+
 
 /* ROOT FONT STYLES */
 
@@ -193,7 +204,10 @@ p {
 .col-1,
 .col-2,
 .col-3,
-.col-4,
+.col-4 {
+  background-color: bisque;
+  margin-left: 1em;
+} 
 .col-5,
 .col-6,
 .col-7,

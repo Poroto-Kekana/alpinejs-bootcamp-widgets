@@ -180,23 +180,34 @@
                             <button @click="leastPopularCF">least Popular CF</button>
                         </div> 
 
-                        <div>
-                            <input x-model="color" placeholder="Color of a car">
-                            <select x-model="townName">
-                                <option value="">select a town</option>
-                                <option value="CJ">Paarl</option>
-                                <option value="CY">Bellville</option>
-                                <option value="PK">Stellenbosch</option>
-                                <option value="CL">Malmesbury</option>
-                                <option value="CA">Cape Town</option>
-                                <option value="CF">Kuilsriver</option>
-                            </select>
-                            <button @click="search"> Search</button>
-                        </div>   
+                        <div class="row" class="select">
+                            <div class="col-8">
+                                <div>
+                                    <select x-model="townName">
+                                        <option value="">select a town</option>
+                                        <option value="CJ">Paarl</option>
+                                        <option value="CY">Bellville</option>
+                                        <option value="PK">Stellenbosch</option>
+                                        <option value="CL">Malmesbury</option>
+                                        <option value="CA">Cape Town</option>
+                                        <option value="CF">Kuilsriver</option>
+                                    </select>
+                                </div> 
+        
+                                <div>
+                                    <input x-model="color" placeholder="Color of a car">
+                                </div>
+        
+                                <div>
+                                    <button @click="search"> Search</button>
+                                </div>
+                            </div>
+                           
+                        </div>      
                            
                     </div>
 
-                    <div class="col-4" class="cars">
+                    <div class="col-4 cars">
                         <template x-for="car in cars">
                             <h4 x-text="car.make"></h4>
                         </template>

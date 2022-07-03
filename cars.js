@@ -352,6 +352,7 @@ document.addEventListener("alpine:init", () => {
     search() {
       let searchString = '';
       this.cars = carsObject.filter(car => {
+      
         if(this.townName) {
           searchString = car.reg_number.startsWith(this.townName)
         }
@@ -360,6 +361,8 @@ document.addEventListener("alpine:init", () => {
           searchString = searchString && car.color.toLocaleLowerCase() === this.color.toLowerCase();        
         }
         return searchString;
+
+        
       })
 
     }
