@@ -209,7 +209,10 @@
 
                     <div class="col-4 cars">
                         <template x-for="car in cars">
-                            <h4 x-text="car.make"></h4>
+                           <h4>
+                            <span x-text="car.make"></span>
+                            <span x-text="car.reg_number"></span>
+                           </h4>    
                         </template>
                     </div>
                 </div>
