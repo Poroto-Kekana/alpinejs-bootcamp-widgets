@@ -144,78 +144,87 @@
                         <hr>
                     </div>
                 </div>
-    
-                <div class="row">
-                    <div class="col-8 side-bar">
-                        <h5>Categories</h5>
-                        <div>
-                            <button @click="allCars">All cars</button>
-                        </div>
 
-                        <div>
-                            <button @click="mostPopularCar" >Most Popular Car</button>
-                        </div>
-
-                        <div>
-                            <button @click="nissansFromCK">Nissans From CK</button>
-                        </div>
-                        
-                        <div>
-                            <button @click="mostBlueCars"> Most Blue Cars</button>
-                        </div>
-                         
-                        <div>
-                            <button @click="fewestOrangeCars">Fewest Orange Cars</button>
-                        </div>
-                        
-                        <div>
-                            <button @click="mostPopularModel"> Most Popular Model</button>
-                        </div>
-                           
-                        <div>
-                            <button @click="mostPopularCL">Most Popular CL</button>
-                        </div>
-                            
-                        <div>   
-                            <button @click="leastPopularCF">least Popular CF</button>
-                        </div> 
-
-                        <div class="row" class="select">
-                            <div class="col-8">
-                                <div>
-                                    <select x-model="townName">
-                                        <option value="">select a town</option>
-                                        <option value="CJ">Paarl</option>
-                                        <option value="CY">Bellville</option>
-                                        <option value="PK">Stellenbosch</option>
-                                        <option value="CL">Malmesbury</option>
-                                        <option value="CA">Cape Town</option>
-                                        <option value="CF">Kuilsriver</option>
-                                    </select>
-                                </div> 
-        
-                                <div>
-                                    <input x-model="color" placeholder="Color of a car">
-                                </div>
-        
-                                <div>
-                                    <button @click="search"> Search</button>
-                                </div>
+                <div>
+                    <div class="row">
+                        <div class="col-6 side">
+                            <h5>Categories</h5>
+                            <div>
+                                <button @click="allCars">All cars</button>
                             </div>
-                           
-                        </div>      
-                           
-                    </div>
-
-                    <div class="col-4 cars">
-                        <template x-for="car in cars">
-                           <h4>
-                            <span x-text="car.make"></span>
-                            <span x-text="car.reg_number"></span>
-                           </h4>    
-                        </template>
+    
+                            <div>
+                                <button @click="mostPopularCar" >Most Popular Car</button>
+                            </div>
+    
+                            <div>
+                                <button @click="nissansFromCK">Nissans From CK</button>
+                            </div>
+                            
+                            <div>
+                                <button @click="mostBlueCars"> Most Blue Cars</button>
+                            </div>
+                             
+                            <div>
+                                <button @click="fewestOrangeCars">Fewest Orange Cars</button>
+                            </div>
+                            
+                            <div>
+                                <button @click="mostPopularModel"> Most Popular Model</button>
+                            </div>
+                               
+                            <div>
+                                <button @click="mostPopularCL">Most Popular CL</button>
+                            </div>
+                                
+                            <div>   
+                                <button @click="leastPopularCF">least Popular CF</button>
+                            </div> 
+    
+                            <div class="row" class="select">
+                                <div class="col-6 side">
+                                    <div>
+                                        <select x-model="townName">
+                                            <option value="">select a town</option>
+                                            <option value="CJ">Paarl</option>
+                                            <option value="CY">Bellville</option>
+                                            <option value="PK">Stellenbosch</option>
+                                            <option value="CL">Malmesbury</option>
+                                            <option value="CA">Cape Town</option>
+                                            <option value="CF">Kuilsriver</option>
+                                        </select>
+                                    </div> 
+            
+                                    <div>
+                                        <input x-model="color" placeholder="Color of a car">
+                                    </div>
+            
+                                    <div>
+                                        <button @click="search"> Search</button>
+                                    </div>
+                                </div>
+                               
+                            </div>      
+                               
+                        </div>
+                    
+    
+                    
+                        <div class="col-4 show cars">
+                            <div>
+                                <template x-for="car in cars">
+                                    <h4>
+                                     <span x-text="car.make"></span>
+                                     <span x-text="car.reg_number"></span>
+                                    </h4>    
+                                 </template>
+                            </div>
+                            
+                        </div>
                     </div>
                 </div>
+
+               
             </div>
            
         </section>

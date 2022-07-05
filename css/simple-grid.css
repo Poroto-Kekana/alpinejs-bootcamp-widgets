@@ -83,6 +83,22 @@ span>span {
   /* width: 100%; */
 }
 
+.template{
+  margin-top: 4em;
+}
+
+.side {
+  /* display:contents; */
+  margin: 0;
+  
+}
+
+.show {
+  /* display:grid; */
+  margin: 10em;
+  padding-left: 1.5em;
+}
+
 .select {
   border-radius: 1em;
 }
